@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Cocos Hotel</title>
     <link rel="stylesheet" href="../styles/Styles.css" />
+    <link rel="icon" href="../media/hotel.png" type="image/x-icon">
   </head>
   <body>
     <?php
