@@ -5,20 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Cocos Hotel</title>
-    <link rel="stylesheet" href="../styles/index.css" />
+    <link rel="stylesheet" href="../styles/Styles.css" />
   </head>
   <body>
-    <!-- Este header sera remplazado por un import de php por -->
-    <header>
-      <ul id="nav-bar">
-        <li><a href="./index.html" class="nav-link">Home</a></li>
-        <li><a href="./Rooms.html" class="nav-link">Rooms</a></li>
-        <li><a href="./Facilities.html" class="nav-link">Facilities</a></li>
-        <li><a href="" class="nav-link">Contact us</a></li>
-        <li><a href="" id="brd-li">Booking Now</a></li>
-      </ul>
-    </header>
-    <div class="home"></div>
+    <?php
+      include("./header.php");
+    ?>
     <div id="message-section">
       <img src="../media/message-img.jpg" alt="hotel-room" />
       <div id="message">
@@ -95,26 +87,8 @@
         <h2>Enjoy our luxury rooms</h2>
       </section>
     </main>
-    <!-- La maquetación del footer también se importara mediante php -->
-    <footer>
-      <p>
-        <i class="fa-sharp fa-regular fa-copyright"></i>
-        <span id="year"></span> 
-        <span>Cocos Hotel All rights reserved </span> 
-        <span id="icons">
-          <i class="fa-brands fa-facebook"></i>
-          <i class="fa-brands fa-instagram"></i>
-          <i class="fa-brands fa-twitter"></i>
-        </span> 
-      </p>
-    </footer>
-    <!--Scrip para el año-->
-    <script>
-      let year = document.getElementById("year"); 
-      var y = new Date().getFullYear();
-      year.innerHTML = y;
-    </script>
-    <!--Script para iconos-->
-    <script src="https://kit.fontawesome.com/7bcd40cb83.js" crossorigin="anonymous"></script>
+  <?php
+    include("./footer.php");
+  ?>
   </body>
 </html>

@@ -7,16 +7,9 @@
     <title>Rooms</title>
   </head>
   <body>
-    <!-- Este header sera remplazado por un import de php por -->
-    <header>
-      <ul id="nav-bar">
-        <li><a href="./index.html" class="nav-link">Home</a></li>
-        <li><a href="./Rooms.html" class="nav-link">Rooms</a></li>
-        <li><a href="./Facilities.html" class="nav-link">Facilities</a></li>
-        <li><a href="" class="nav-link">Contact us</a></li>
-        <li class="brd-li"><a href="" class="nav-link">Booking Now</a></li>
-      </ul>
-    </header>
+    <?php
+      include("./header.php");
+    ?>
     <div id="title-page"></div>
     <div id="rooms"></div>
     <!-- La maquetación del footer también se importara mediante php -->
