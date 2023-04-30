@@ -102,7 +102,5 @@
     <?php
       include("./footer.php");
     ?>
-    <!--Script para iconos-->
-    <script src="https://kit.fontawesome.com/7bcd40cb83.js" crossorigin="anonymous"></script>
   </body>
 </html>
