@@ -219,14 +219,17 @@ footer{
     color: #fff;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
 }
 
 footer p{
-    width: 30%;
+    width: 50%;
+    max-width: 60rem;
+    min-width: 20rem;
     height: inherit;
     display: flex;
     align-items: center;
+    justify-content: center;
     font-size: 1.5rem;
     gap: 7px;
 }
@@ -236,4 +239,5 @@ i{
     font-size: 1.5rem;
     color: #fff;
     cursor: pointer;
+    margin-left: 0.7rem;
 }

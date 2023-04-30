@@ -1,0 +1,28 @@
+
+#title-page{
+    width: 100%;
+    height: 60rem;
+    display: flex;
+    align-items: center;
+}
+
+#title-page img{
+    height: 100%; width: 50%;
+    object-fit: cover;
+}
+
+#title-message{
+    color: #fff;
+    width: 30rem; height: 20rem;
+    background-color: var(--background-color2);
+    display: grid;
+    place-items: center;
+    text-align: center;
+    position: relative;
+    left: -4rem;
+}
+
+#title-message h1{
+    font-family: serif;
+    font-size: 2.5rem;
+}

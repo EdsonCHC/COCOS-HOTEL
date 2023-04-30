@@ -1,4 +1,6 @@
+@import url(./index.css);
 @import url(../styles/vars.css);
 @import url(../styles/scroll.css);
 @import url(./header.css);
-@import url(./index.css);
+@import url(./rooms.css);
+@import url(./facilities.css);

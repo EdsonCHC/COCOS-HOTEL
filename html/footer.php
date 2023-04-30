@@ -3,7 +3,9 @@
         <i class="fa-sharp fa-regular fa-copyright"></i>
         <span id="year"></span>
         <span>Cocos Hotel All rights reserved </span>
-        <span id="icons">
+    </p>
+    <p>
+    <span id="icons">
             <i class="fa-brands fa-facebook"></i>
             <i class="fa-brands fa-instagram"></i>
             <i class="fa-brands fa-twitter"></i>
