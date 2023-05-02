@@ -36,13 +36,20 @@
         </div>
         <form action="">
             <label id="flex-label">
-                <input type="text" id="frt-name" placeholder="First name" name="FrtName" pattern="[A-Za-z]+">
-                <input type="text" id="lst-name" placeholder="Last name" name="LstName" pattern="[A-Za-z]+">
+                <label for="">
+                <input type="text" id="frt-name" placeholder="First name" name="FrtName" pattern="[a-zA-Z]+" required>
+                <div id="err1" class="errM"></div>
+                </label>
+                <label for="">
+                <input type="text" id="lst-name" placeholder="Last name" name="LstName" pattern="[A-Za-z]+" required>
+                <div id="err2" class="errM"></div>
+                </label>
             </label>
             <label for="num-tel">
-                <input type="tel" placeholder="Phone number" pattern="^([0-9])*$">
+                <input type="tel" placeholder="Phone number" pattern="^([0-9])*$" id="phone">
+                <div id="err3" class="errM"></div>
             </label>
-            <select name="room">
+            <select name="room" required>
                 <option value="" selected disabled>Room type</option>
                 <option value="Single">Single</option>
                 <option value="Family">Family</option>
@@ -50,7 +57,7 @@
                 <option value="Residential">Residential</option>
             </select>
             <label for="">
-                <input type="date" name="">
+                <input type="date" name="date" required>
             </label>
             <input type="submit" value="Book Room" id="sub">
         </form>
@@ -58,11 +65,8 @@
     <?php
         include("./footer.php")
     ?>
-    <!-- VALIDACIÓN DE FORMULARIO -->
-    <script>
-        let name = document.getElementById('frt-name');
-        name.oninvalid = function(e){e.target.setCustomValidity('The first name can\'t have numbers and especial characters');}
-        
+    <script src="../js/valBook.js">
+
     </script>
 </body>
 
