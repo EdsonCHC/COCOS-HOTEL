@@ -11,7 +11,7 @@
 
 #form-div{
     width: 100%;
-    max-width: 90rem;
+    max-width: 135rem;
     height: 70rem;
     margin: 2rem auto;
     display: flex;
@@ -110,4 +110,21 @@ input.invalid{
 .errM{
     color: red;
     font-size: 1.3rem;
+}
+
+#code{
+    padding: 4rem 0;
+}
+
+#code h1, h2{
+    color: black;
+    margin-bottom: 2rem;
+}
+
+#code h3{
+    width: 100%;
+    text-align: center;
+    font-size: 4rem;
+    margin-top: 4rem;
+    color: var(--btn-color);
 }

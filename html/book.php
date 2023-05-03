@@ -1,3 +1,21 @@
+<?php
+
+if (!isset($_POST)) {
+    unset($_POST);
+}
+
+function generateCode($long)
+{
+
+    $data = "";
+    for ($i = 1; $i <= $long; $i++) {
+        $number = rand(0, 9);
+        $data .= $number;
+    }
+    return $data;
+}
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -34,19 +52,21 @@
                 </li>
             </ul>
         </div>
-        <form action="">
+        <form action="" method="POST">
             <label id="flex-label">
                 <label for="">
-                <input type="text" id="frt-name" placeholder="First name" name="FrtName" pattern="[a-zA-Z]+" required>
-                <div id="err1" class="errM"></div>
+                    <input type="text" id="frt-name" placeholder="First name" name="FrtName" pattern="[a-zA-Z]+"
+                        required>
+                    <div id="err1" class="errM"></div>
                 </label>
                 <label for="">
-                <input type="text" id="lst-name" placeholder="Last name" name="LstName" pattern="[A-Za-z]+" required>
-                <div id="err2" class="errM"></div>
+                    <input type="text" id="lst-name" placeholder="Last name" name="LstName" pattern="[A-Za-z]+"
+                        required>
+                    <div id="err2" class="errM"></div>
                 </label>
             </label>
             <label for="num-tel">
-                <input type="tel" placeholder="Phone number" pattern="^([0-9])*$" id="phone">
+                <input type="tel" name="phone" placeholder="Phone number" pattern="^([0-9])*$" id="phone" required>
                 <div id="err3" class="errM"></div>
             </label>
             <select name="room" required>
@@ -59,14 +79,67 @@
             <label for="">
                 <input type="date" name="date" required>
             </label>
-            <input type="submit" value="Book Room" id="sub">
+            <input type="submit" value="Book Room" id="sub" name="submit">
         </form>
+        <div id="code">
+            <h1>Save this code to make it easier to check your reservation.</h1>
+            <h2>"The code will be generated when you make the reservation."</h2>
+            <h3>
+                <?php if (isset($_POST["submit"])) {
+                    $code = generateCode(10);
+                    echo $code;
+                }
+                ?>
+            </h3>
+        </div>
     </div>
+
     <?php
-        include("./footer.php")
+
+    if (isset($_POST["submit"])) {
+
+        require_once("../php/conex.php");
+        require_once("../php/methods.php");
+
+        $firstName = $_POST["FrtName"];
+        $lastName = $_POST["LstName"];
+        $phone = $_POST["phone"];
+        $room = $_POST["room"];
+        $date = $_POST["date"];
+
+
+        $datos = array(
+            $firstName,
+            $lastName,
+            $phone,
+            $room,
+            $date,
+            $code
+        );
+        $obj = new methods;
+        $obj->insertData($datos);
+
+    }
+
     ?>
+    <?php
+    include("./footer.php")
+        ?>
     <script src="../js/valBook.js">
 
+    </script>
+    <!-- ! DESCATIVA tecla f5 ! -->
+    <script>
+        function checkKeyCode(evt) {
+
+            var evt = (evt) ? evt : ((event) ? event : null);
+            var node = (evt.target) ? evt.target : ((evt.srcElement) ? evt.srcElement : null);
+            if (event.keyCode == 116) {
+                evt.keyCode = 0;
+                return false
+            }
+        }
+        document.onkeydown = checkKeyCode;
     </script>
 </body>
 
