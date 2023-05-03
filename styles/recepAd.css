@@ -1,0 +1,132 @@
+*,::after, ::before{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+    font-family: Arial, Helvetica, sans-serif;
+    scroll-behavior: smooth;
+}
+
+body{
+    width: 100%;
+    height: 100%;
+}
+
+#pattern-div-aside{
+    display: flex;
+    flex-direction: row;
+}
+
+#admin-sidebar{
+    width: 30rem;
+    height: 100%;
+    min-height: 93rem;
+    background-color: #f1f1f1;
+}
+
+#div-admin-company{
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+    padding: 5rem;
+}
+
+#div-admin-company img{
+    width: 5rem;
+}
+
+#div-admin-company h2 , a{
+    margin: auto;
+    padding: 1rem;
+    font-size: 2.5rem;
+    text-align: center;
+    text-decoration: none;
+    color: #000;
+}
+
+#nav-admin{
+    margin: auto;
+    padding: 0 4.5rem;
+    text-align: start;
+}
+
+.admin-list{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 2rem;
+    border-radius: 10px;
+}
+
+.admin-nav-link::after{
+    content: '';
+    width: 0;
+    height: 2px;
+    background-color: var(--btn-color);
+    transition: 0.5s ease;
+}
+
+.admin-nav-link:hover:after{
+    width: 100%;
+    cursor: pointer;
+}
+
+#i-nav-admin{
+    margin: 1rem 0 0 3rem;
+    font-size: 2rem;
+    color: #343434;
+}
+
+.admin-nav-ul{
+    width: 100%;
+    height: auto;
+    margin-top: 3rem;
+    list-style: none;
+}
+
+.admin-nav-link{
+    color: #343434;
+    text-decoration: none;
+    font-size: 2rem;
+    margin: auto;
+    padding: 1rem;
+    border-radius: 10px;
+    display: grid;
+}
+
+.workpace-recep{
+    margin: 5rem;
+    padding: auto;
+}
+
+.workpace-recep h2{
+    font-size: 3rem;
+    font-weight: 600;
+}
+
+.btn-workpace{
+    margin: 3rem;
+}
+
+.btn-workpace a input{
+    font-size: 2rem;
+    padding: 1rem 2rem;
+    background-color: #55aaff;
+    border: 1px solid #000;
+    cursor: pointer;
+}
+
+.workpace-room{
+    margin: 5rem;
+    padding: auto;
+}
+
+.workpace-room h2{
+    font-size: 3rem;
+    font-weight: 600;
+}
