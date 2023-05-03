@@ -79,6 +79,9 @@ function generateCode($long)
             <label for="">
                 <input type="date" name="date" required>
             </label>
+<label for="">
+<input type="time" name="time" required>
+</label>
             <input type="submit" value="Book Room" id="sub" name="submit">
         </form>
         <div id="code">
@@ -106,6 +109,7 @@ function generateCode($long)
         $phone = $_POST["phone"];
         $room = $_POST["room"];
         $date = $_POST["date"];
+        $time = $_POST["time"];
 
 
         $datos = array(
@@ -114,6 +118,7 @@ function generateCode($long)
             $phone,
             $room,
             $date,
+            $time,
             $code
         );
         $obj = new methods;
