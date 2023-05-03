@@ -66,7 +66,7 @@ form{
 label, select{
     width: 100%;
     height: auto;
-    margin-bottom: 3rem;
+    margin-bottom: 3rem !important;
 }
 
 #flex-label{
@@ -75,14 +75,12 @@ label, select{
     gap: 2rem;
 }
 
-input:not(#sub):valid, select{
+input, select{
     width: 100%;
-    box-shadow: none;
-    outline: 1px solid #ddd !important;
-    border: none;
     padding: 2rem;
     font-size: 1.5rem;
     border-radius: 8px;
+    margin-bottom: 0.2rem;
 }
 
 input[type="submit"]{
@@ -99,12 +97,17 @@ input[type="submit"]{
     cursor: pointer;
 }
 
-input:invalid{
-    width: 100%;
-    box-shadow: none;
+input.valid{
+    outline: 1px solid #ddd !important;
+    border: none;
+}
+
+input.invalid{
     outline: 1px solid red;
     border: none;
-    padding: 2rem;
-    font-size: 1.5rem;
-    border-radius: 8px;
+}
+
+.errM{
+    color: red;
+    font-size: 1.3rem;
 }
