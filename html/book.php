@@ -1,3 +1,12 @@
+<?php
+
+if ($_POST["submit"]) {
+    session_destroy();
+}
+
+
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -34,20 +43,26 @@
                 </li>
             </ul>
         </div>
-        <form action="">
+        <form action="../php/reserv.php" method="POST">
             <label id="flex-label">
                 <label for="">
-                    <input type="text" id="frt-name" placeholder="First name" name="FrtName" pattern="[a-zA-Z]+" required>
+                    <input type="text" id="frt-name" placeholder="First name" name="FrtName" pattern="[a-zA-Z]+"
+                        required>
                     <div id="err1" class="errM"></div>
                 </label>
                 <label for="">
-                    <input type="text" id="lst-name" placeholder="Last name" name="LstName" pattern="[A-Za-z]+" required>
+                    <input type="text" id="lst-name" placeholder="Last name" name="LstName" pattern="[A-Za-z]+"
+                        required>
                     <div id="err2" class="errM"></div>
                 </label>
             </label>
             <label for="num-tel">
-                <input type="tel" placeholder="Phone number" pattern="^([0-9])*$" id="phone">
+                <input type="tel" name="phone" placeholder="Phone number" pattern="^([0-9])*$" id="phone" required>
                 <div id="err3" class="errM"></div>
+            </label>
+            <label for="">
+                <input type="text" name="dui" id="dui" pattern="^\d{8}-\d{1}$" placeholder="DUI" required>
+                <div id="err5" class="errM"></div>
             </label>
             <select name="room" required>
                 <option value="" selected disabled>Room type</option>
@@ -59,14 +74,31 @@
             <label for="">
                 <input type="date" name="date" required>
             </label>
-            <input type="submit" value="Book Room" id="sub">
+            <label for="">
+                <input type="time" name="time" id="time" min="08:00" max="21:00" required>
+                <div id="err4" class="errM"></div>
+            </label>
+            <input type="submit" value="Book Room" id="sub" name="submit">
         </form>
     </div>
     <?php
-        include("./footer.php")
+    include("./footer.php")
     ?>
     <script src="../js/valBook.js">
 
+    </script>
+    <!-- ! DESCATIVA tecla f5 ! -->
+    <script>
+        function checkKeyCode(evt) {
+
+            var evt = (evt) ? evt : ((event) ? event : null);
+            var node = (evt.target) ? evt.target : ((evt.srcElement) ? evt.srcElement : null);
+            if (event.keyCode == 116) {
+                evt.keyCode = 0;
+                return false
+            }
+        }
+        document.onkeydown = checkKeyCode;
     </script>
 </body>
 
