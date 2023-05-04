@@ -1,20 +1,3 @@
-*,::after, ::before{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-}
-
-html{
-    font-size: 62.5%;
-    font-family: Arial, Helvetica, sans-serif;
-    scroll-behavior: smooth;
-}
-
-body{
-    width: 100%;
-    height: 100%;
-}
-
 #pattern-div-aside{
     display: flex;
     flex-direction: row;
@@ -38,7 +21,7 @@ body{
     width: 5rem;
 }
 
-#div-admin-company h2 , a{
+#div-admin-company h2 , #div-admin-company a{
     margin: auto;
     padding: 1rem;
     font-size: 2.5rem;

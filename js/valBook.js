@@ -85,3 +85,59 @@ inputPhone.addEventListener("input", function (event) {
 
 const hoy = new Date().toISOString().split("T")[0];
 document.getElementsByName("date")[0].setAttribute('min', hoy);
+
+// input time 
+
+let inputTime = document.getElementById("time");
+let err4 = document.getElementById("err4");
+
+var elem4 = document.createElement("div");
+elem4.id = "notify";
+elem4.style.display = "none";
+err4.appendChild(elem4);
+
+inputTime.addEventListener("invalid", function (event) {
+  event.preventDefault();
+  if (!event.target.validity.valid) {
+    elem4.textContent =
+      "Our rooms can only be booked from 8 am to 9 pm";
+    elem4.className = "error";
+    elem4.style.display = "block";
+    inputTime.className = "invalid";
+  }
+});
+
+inputTime.addEventListener("input", function (event) {
+  if ("block" === elem4.style.display) {
+    inputTime.className = "";
+    elem4.style.display = "none";
+  }
+});
+
+// inputDui
+
+let inputDui = document.getElementById("dui");
+let err5 = document.getElementById("err5");
+
+var elem5 = document.createElement("div");
+elem5.id = "notify";
+elem5.style.display = "none";
+err5.appendChild(elem5);
+
+inputDui.addEventListener("invalid", function (event) {
+  event.preventDefault();
+  if (!event.target.validity.valid) {
+    elem5.textContent =
+      "Please insert a format valid: 8 number plus '-' and 1 number";
+    elem5.className = "error";
+    elem5.style.display = "block";
+    inputDui.className = "invalid";
+  }
+});
+
+inputDui.addEventListener("input", function (event) {
+  if ("block" === elem5.style.display) {
+    inputDui.className = "";
+    elem5.style.display = "none";
+  }
+});

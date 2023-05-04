@@ -1,6 +1,6 @@
 #present-img{
     width: 100%;
-    height: 40rem;
+    height: 30rem;
 }
 
 #present-img img{
@@ -11,7 +11,7 @@
 
 #form-div{
     width: 100%;
-    max-width: 135rem;
+    max-width: 90rem;
     height: 70rem;
     margin: 2rem auto;
     display: flex;
@@ -110,21 +110,4 @@ input.invalid{
 .errM{
     color: red;
     font-size: 1.3rem;
-}
-
-#code{
-    padding: 4rem 0;
-}
-
-#code h1, #code h2{
-    color: black;
-    margin-bottom: 2rem;
-}
-
-#code h3{
-    width: 100%;
-    text-align: center;
-    font-size: 4rem;
-    margin-top: 4rem;
-    color: var(--btn-color);
 }
