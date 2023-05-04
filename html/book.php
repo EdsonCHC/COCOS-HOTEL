@@ -1,12 +1,3 @@
-<?php
-
-if ($_POST["submit"]) {
-    session_destroy();
-}
-
-
-
-?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -43,7 +34,7 @@ if ($_POST["submit"]) {
                 </li>
             </ul>
         </div>
-        <form action="../php/reserv.php" method="POST">
+        <form action="" method="POST">
             <label id="flex-label">
                 <label for="">
                     <input type="text" id="frt-name" placeholder="First name" name="FrtName" pattern="[a-zA-Z]+"
@@ -82,6 +73,37 @@ if ($_POST["submit"]) {
         </form>
     </div>
     <?php
+
+    if(isset($_POST["submit"])){
+
+        require_once("../php/conex.php");
+        require_once("../php/methods.php");
+
+        $firstName = $_POST["FrtName"];
+        $lastName = $_POST["LstName"];
+        $phone = $_POST["phone"];
+        $dui = $_POST["dui"];
+        $room = $_POST["room"];
+        $date = $_POST["date"];
+        $time = $_POST["time"];
+
+
+        $datos = array(
+            $firstName,
+            $lastName,
+            $phone,
+            $dui,
+            $room,
+            $date,
+            $time
+        );
+        $obj = new methods;
+        $obj->insertData($datos);
+        header("Location: ../html/book.php");
+    }
+
+    ?>
+    <?php
     include("./footer.php")
     ?>
     <script src="../js/valBook.js">
@@ -95,7 +117,7 @@ if ($_POST["submit"]) {
             var node = (evt.target) ? evt.target : ((evt.srcElement) ? evt.srcElement : null);
             if (event.keyCode == 116) {
                 evt.keyCode = 0;
-                return false
+                return false;
             }
         }
         document.onkeydown = checkKeyCode;
