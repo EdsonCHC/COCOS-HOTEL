@@ -116,7 +116,7 @@ input.invalid{
     padding: 4rem 0;
 }
 
-#code h1, h2{
+#code h1, #code h2{
     color: black;
     margin-bottom: 2rem;
 }

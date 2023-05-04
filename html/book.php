@@ -77,7 +77,7 @@ function generateCode($long)
                 <option value="Residential">Residential</option>
             </select>
             <label for="">
-                <input type="date" name="date" required>
+                <input type="date" name="date" min="08:00" max="21:00" required>
             </label>
 <label for="">
 <input type="time" name="time" required>
