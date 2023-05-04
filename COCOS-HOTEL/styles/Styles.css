@@ -1,0 +1,12 @@
+@import url(./index.css);
+@import url(../styles/vars.css);
+@import url(../styles/scroll.css);
+@import url(./header.css);
+@import url(./rooms.css);
+@import url(./facilities.css);
+@import url(./book.css);
+@import url(./recepAd.css);
+@import url(./logIn.css);
+@import url(./formAddEmp.css);
+@import url(./checkIn.css);
+@import url(./reserv.css);
