@@ -37,12 +37,12 @@
         <form action="">
             <label id="flex-label">
                 <label for="">
-                <input type="text" id="frt-name" placeholder="First name" name="FrtName" pattern="[a-zA-Z]+" required>
-                <div id="err1" class="errM"></div>
+                    <input type="text" id="frt-name" placeholder="First name" name="FrtName" pattern="[a-zA-Z]+" required>
+                    <div id="err1" class="errM"></div>
                 </label>
                 <label for="">
-                <input type="text" id="lst-name" placeholder="Last name" name="LstName" pattern="[A-Za-z]+" required>
-                <div id="err2" class="errM"></div>
+                    <input type="text" id="lst-name" placeholder="Last name" name="LstName" pattern="[A-Za-z]+" required>
+                    <div id="err2" class="errM"></div>
                 </label>
             </label>
             <label for="num-tel">

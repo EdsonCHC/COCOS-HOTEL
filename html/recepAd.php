@@ -25,42 +25,103 @@
                     <li class="admin-list"><i class="fa-solid fa-users" id="i-nav-admin"></i>
                         <a href="#" class="admin-nav-link">Users</a>
                     </li>
+                    
+                </ul>
+                <ul class="admin-nav-ul-log">
                     <li class="admin-list"><i class="fa-solid fa-right-from-bracket" id="i-nav-admin"></i>
                         <a href="#" class="admin-nav-link">Log out</a>
                     </li>
                 </ul>
             </div>
         </div>
-    <div id="workpace">
-        <div class="workpace-recep">
-            <h2>Workpace Receptionist</h2>
-            <div class="btn-workpace">
-                <a href="#"><input type="button" value="Add"></a>  
-                <a href="#"><input type="button" value="Update"></a>  
-                <a href="#"><input type="button" value="Delete"></a>  
-            </div>
-            <div class="recep-space">
-                <option value=""></option>
-                <option value=""></option>
-                <option value=""></option>
-                <option value=""></option>
+        <div id="workpace">
+            <div>
+                <div>
+                    <h1 class="tittle-work">Staff </h1>
+                </div>
+                <form action="" class="nuevo" method="post">
+                    <a href="./formAddEm.php" class="btn btn__nuevo">New</a>
+                </form>
+                <div class="container-card">
+
+                <div class="card">
+
+                    <img src="../media/hotel.png">
+
+                    <div class="contenido-card">
+                        <h3>Lucas</h3>
+                        <p>There are many variations of passages of Lorem Ipsum available, but the majority have
+                            suffered alteration in some form, by injected humour,</p>
+                            <a href="#">Delete</a>
+                    </div>
+                </div>
+                <div class="card">
+
+                    <img src="../media/hotel.png">
+
+                    <div class="contenido-card">
+                        <h3>Juan</h3>
+                        <p>There are many variations of passages of Lorem Ipsum available, but the majority have
+                            suffered alteration in some form, by injected humour,</p>
+                            <a href="#">Delete</a>
+                    </div>
+                </div>
+                <div class="card">
+
+                    <img src="../media/hotel.png">
+
+                    <div class="contenido-card">
+                        <h3>Jose</h3>
+                        <p>There are many variations of passages of Lorem Ipsum available, but the majority have
+                            suffered alteration in some form, by injected humour,</p>
+                            <a href="#">Delete</a>
+                    </div>
+                </div>
+
             </div>
         </div>
         <div class="workpace-room">
-            <h2>Workpace Room</h2>
-            <div class="btn-workpace"> 
-                <a href="#"><input type="button" value="Add"></a>  
-                <a href="#"><input type="button" value="Update"></a>  
-                <a href="#"><input type="button" value="Delete"></a>  
-            </div>
-            <div class="room-space">
-                <option value=""></option>
-                <option value=""></option>
-                <option value=""></option>
-                <option value=""></option>
+            <div>
+                <div>
+                    <h1 class="tittle-work">Room</h1>
+                </div>
+                <div class="container-card">
+
+                <div class="card">
+
+                    <img src="../media/hotel.png">
+
+                    <div class="contenido-card">
+                        <h3>Lucas</h3>
+                        <p>There are many variations of passages of Lorem Ipsum available, but the majority have
+                            suffered alteration in some form, by injected humour,</p>
+                            <a href="#">Delete</a>
+                    </div>
+                </div>
+                <div class="card">
+
+                    <img src="../media/hotel.png">
+
+                    <div class="contenido-card">
+                        <h3>Juan</h3>
+                        <p>There are many variations of passages of Lorem Ipsum available, but the majority have
+                            suffered alteration in some form, by injected humour,</p>
+                            <a href="#">Delete</a>
+                    </div>
+                </div>
+                <div class="card">
+
+                    <img src="../media/hotel.png">
+
+                    <div class="contenido-card">
+                        <h3>Jose</h3>
+                        <p>There are many variations of passages of Lorem Ipsum available, but the majority have
+                            suffered alteration in some form, by injected humour,</p>
+                        <a href="#">Delete</a>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
     </div>
     <?php
         include("./footer.php")

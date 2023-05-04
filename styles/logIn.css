@@ -1,0 +1,47 @@
+form #form-log-admin{
+    align-items: center;
+}
+
+#form-log-admin {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fff;
+    padding: 3rem;
+    margin: 5% 15%;
+}
+
+.form-sect-log{
+    background-color: #ededed;
+    border: 1px solid #343434;
+    border-radius: 10px;
+}
+
+.tittle-log-admin{
+    padding: 2.5rem;
+    font-size: 20px;
+    color: #b72c2c;
+}
+
+.inp-log-admin{
+    margin: 1rem;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+}
+
+#name-admin{
+    border: 1px solid #000;
+}
+
+#pass-admin{
+    border: 1px solid #000;
+}
+
+.btn-log-admin{
+    align-items: center;
+}
+
+#btn-log-admin{
+    padding: auto;
+}
